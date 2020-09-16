@@ -1,0 +1,12 @@
+.draggableContainer {
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  cursor: pointer;
+  margin-top: 3px;
+}
