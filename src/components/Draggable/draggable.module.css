@@ -10,3 +10,6 @@
   cursor: pointer;
   margin-top: 3px;
 }
+.draggableContainerIsDragging {
+    opacity: 0.5;
+}
