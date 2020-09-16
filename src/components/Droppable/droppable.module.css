@@ -50,6 +50,6 @@
   flex-direction: row;
 }
 .label {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
 }
