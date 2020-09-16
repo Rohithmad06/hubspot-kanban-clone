@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./draggable.module.css";
 import { useDrag } from "react-dnd";
 import { ItemTypes } from "../utils";
-import moment from "moment";
 const Draggable = (props) => {
   const [DragginProps, drag] = useDrag({
     item: { id: props.id, type: ItemTypes.CARD },
