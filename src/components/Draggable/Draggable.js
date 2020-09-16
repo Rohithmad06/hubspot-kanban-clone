@@ -2,17 +2,19 @@ import React from "react";
 import styles from "./draggable.module.css";
 import { useDrag } from "react-dnd";
 import { ItemTypes } from "../utils";
+import moment from "moment";
 const Draggable = (props) => {
-  const [{ isDragging }, drag] = useDrag({
+  const [DragginProps, drag] = useDrag({
     item: { id: props.id, type: ItemTypes.CARD },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
   });
+  console.log(DragginProps);
   return (
     <div
       className={
-        isDragging
+        DragginProps.isDragging
           ? [
               styles.draggableContainer,
               styles.draggableContainerIsDragging,
@@ -21,7 +23,10 @@ const Draggable = (props) => {
       }
       ref={drag}
     >
-      {props.name}
+      <div>
+        <a href="#" className={styles.name}>{props.name}</a>
+      </div>
+      <div>Close Date: {props.closeDate.format("LL")}</div>
     </div>
   );
 };
